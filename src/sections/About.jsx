@@ -1,8 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Card from "../components/Card";
-import { Globe } from "../components/globe";
-import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
 
 const About = () => {
   const grid2Container = useRef();
