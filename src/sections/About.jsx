@@ -38,7 +38,7 @@ const About = () => {
         <div className="grid-0 px-0 md:px-6">
           <div className="flex items-center justify-center h-full">
             <div className="">
-              <h3 className="text-4xl">My Design Process</h3>
+              <h3 className="text-4xl">My Approaches</h3>
               <ul className="process-list">
                 <li>
                   <span className="process-number">01</span>

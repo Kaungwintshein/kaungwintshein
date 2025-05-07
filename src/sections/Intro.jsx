@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <section className="hero" id="hero">
+    <section className="hero" id="home">
       <div className="hero-content">
         <h1 className="title uppercase">Frontend Developer</h1>
         <div className="description">
