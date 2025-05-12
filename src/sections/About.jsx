@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { mySkills } from "../constants";
 
 const About = () => {
   const grid2Container = useRef();
@@ -90,18 +91,11 @@ const About = () => {
           <div className="skills">
             <h3 className="text-4xl">Skills & Tools</h3>
             <div className="skill-tags">
-              <span className="skill-tag">ReactJs</span>
-              <span className="skill-tag">NextJs</span>
-              <span className="skill-tag">NestJs</span>
-              <span className="skill-tag">NodeJs</span>
-              <span className="skill-tag">PHP/Laravel</span>
-              <span className="skill-tag">Radix-ui</span>
-              <span className="skill-tag">Tailwind CSS</span>
-              <span className="skill-tag">Headless CMS</span>
-              <span className="skill-tag">Design Systems</span>
-              <span className="skill-tag">Clean Architecture</span>
-              <span className="skill-tag">Motion Design</span>
-              <span className="skill-tag">HTML/CSS</span>
+              {mySkills.map((skill, index) => (
+                <span key={index} className="skill-tag">
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </div>

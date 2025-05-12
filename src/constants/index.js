@@ -1,7 +1,153 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "EzyPet",
+    description:
+      "A cross-platform pet care mobile app and admin portal for managing pet services, featuring responsive UI and real-time notifications.",
+    subDescription: [
+      "Built a mobile app with React Native, implementing a component-based architecture for modular and reusable UI development.",
+      "Developed an admin portal using Laravel, Livewire, and Tailwind CSS, following MVC architecture for efficient pet service management.",
+      "Applied clean architecture by structuring code with presentation, domain, and data layers, ensuring dependency inversion.",
+      "Integrated real-time notifications and responsive design, enhancing user engagement across platforms.",
+    ],
+    href: "https://ezypet.info",
+    logo: "",
+    image: "/assets/projects/ezypet.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "React Native",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Laravel",
+        path: "/assets/logos/laravel.svg",
+      },
+      {
+        id: 3,
+        name: "Livewire",
+        path: "/assets/logos/livewire.svg",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Nexlynk",
+    description:
+      "A modern language learning platform for schools and students, supporting thousands of users with scalable UI components and responsive dashboards.",
+    subDescription: [
+      "Created a learning portal with React Native and Next.js, utilizing a microfrontend architecture for scalable and maintainable UI components.",
+      "Designed responsive admin and school dashboards with Tailwind CSS, leveraging Next.js server-side rendering for performance optimization.",
+      "Implemented clean architecture by isolating business logic in domain layers and using dependency injection for API services.",
+      "Improved usability by 40% through intuitive design and efficient data handling.",
+    ],
+    href: "https://admin.nexlynk.com",
+    logo: "",
+    image: "/assets/projects/nexlynk.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "React Native",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 3,
+        name: "NestJS",
+        path: "/assets/logos/nestjs.svg",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "MIBA",
+    description:
+      "A learning management system with a student portal for seamless course navigation and efficient course management.",
+    subDescription: [
+      "Developed a student portal with React and Tailwind CSS, using a component-based architecture for reusable UI elements.",
+      "Integrated with Laravel backend following MVC architecture, ensuring robust API-driven data handling.",
+      "Adopted clean architecture by separating UI logic, business rules, and data access layers for enhanced maintainability.",
+      "Enabled intuitive course navigation, improving user experience and accessibility.",
+    ],
+    href: "https://miba.sportylite.com",
+    logo: "",
+    image: "/assets/projects/miba.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Laravel",
+        path: "/assets/logos/laravel.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "HR Web Application",
+    description:
+      "A recruitment management system with responsive UI and microservices architecture for efficient hiring processes.",
+    subDescription: [
+      "Developed frontend and backend using Next.js and NestJS, implementing a microservices architecture with NestJS-GRPC and Docker.",
+      "Designed responsive UI with Next.js and Tailwind CSS, optimizing performance with server-side rendering.",
+      "Applied clean architecture with domain-driven design, isolating business logic and using dependency inversion for scalable services.",
+      "Enhanced system scalability and maintainability through containerization and modular design.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/hrwebapp.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "NestJS",
+        path: "/assets/logos/nestjs.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "Docker",
+        path: "/assets/logos/docker.svg",
+      },
+    ],
+  },
+];
+
+export const myProjectsOrg = [
+  {
+    id: 1,
+    title: "React3Fibre Project",
     description:
       "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
     subDescription: [
@@ -10,7 +156,7 @@ export const myProjects = [
       "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
       "Added payment systems, localization, and product filtering for functionality improvements.",
     ],
-    href: "",
+    href: "https://r3f-scroll-animation-wine.vercel.app/",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
@@ -223,6 +369,26 @@ export const myProjects = [
   },
 ];
 
+export const mySkills = [
+  "ReactJs",
+  "NextJs",
+  "NodeJs",
+  "ExpressJs",
+  "NestJs",
+  "Greensock",
+  "PHP/Laravel",
+  "JavaScript",
+  "TypeScript",
+  "Radix-ui",
+  "TailwindCSS",
+  "HTML/CSS",
+  "Git",
+  "Docker",
+  "Headless CMS",
+  "Design Systems",
+  "Clean Architecture",
+  "Motion Design",
+];
 export const mySocials = [
   // {
   //   name: "WhatsApp",
