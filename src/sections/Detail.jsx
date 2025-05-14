@@ -154,7 +154,7 @@ const Detail = () => {
         <section className="px-6 py-12">
           <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
             <div className="flex gap-4 col-span-1">
-              <p className="text-xs text-gray-400">02</p>
+              <p className="text-xs text-gray-400">03</p>
               <h2 className="text-2xl">{project?.objectives[2].key}</h2>
             </div>
             <p className="text-gray-400 col-span-2">
@@ -163,7 +163,7 @@ const Detail = () => {
           </div>
           <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
             <div className="flex gap-4 col-span-1">
-              <p className="text-xs text-gray-400">03</p>
+              <p className="text-xs text-gray-400">04</p>
               <h2 className="text-2xl">{project?.objectives[3].key}</h2>
             </div>
             <p className="text-gray-400 col-span-2">
