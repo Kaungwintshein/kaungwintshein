@@ -1,7 +1,14 @@
+import { frame } from "motion";
+import { object } from "motion/react-client";
+
 export const myProjects = [
   {
     id: 1,
-    title: "EzyPet",
+    slug: "ezypet-pet-care-solution",
+    title: "Pet Care Solution",
+    category: "App & Dashboard",
+    framework: "React Native, Next.js",
+    underCompany: "Lota Global",
     description:
       "A cross-platform pet care mobile app and admin portal for managing pet services, featuring responsive UI and real-time notifications.",
     subDescription: [
@@ -13,6 +20,38 @@ export const myProjects = [
     href: "https://ezypet.info",
     logo: "",
     image: "/assets/projects/ezypet.jpg",
+    images: [
+      "/assets/projects/ezypet-1.jpg",
+      "/assets/projects/ezypet-2.jpg",
+      "/assets/projects/ezypet-3.jpg",
+    ],
+    objectives: [
+      {
+        key: "Problem Statement",
+        value:
+          "This project involves developing a digital e-learning app and dashboard for a local startup company collaborating with language schools. The platform will provide an intuitive interface for students and instructors, featuring course management tools, interactive learning resources, and progress tracking capabilities. By integrating tailored content and fostering collaboration between language schools and learners, the app aims to enhance the language learning experience and promote personalized education.",
+      },
+      {
+        key: "Objective",
+        value:
+          "The e-learning app offers a range of features to enhance learning for both students and instructors. Users can easily browse and purchase courses with secure payments, creating personalized accounts to track their progress. Instructors have access to tools for monitoring student performance and engagement. The app includes short video reels for quick lessons and a comprehensive Learning Management System (LMS) for seamless course delivery.",
+      },
+      {
+        key: "Role",
+        value:
+          "I worked on the e-learning app as a standalone project over 1.5 months, focusing on creating an engaging and user-friendly platform.",
+      },
+      {
+        key: "Design Process",
+        value:
+          "I began the design process with user research to gain insights into the needs and preferences of students and instructors. This involved conducting surveys and interviews to identify pain points and expectations regarding e-learning platforms. With this information, I defined the key requirements for the app and created low-fidelity wireframes to outline the layout and user flow. After refining these wireframes based on feedback, I developed high-fidelity prototypes that incorporated visual design elements, interactions, and animations..",
+      },
+      {
+        key: "Actions & Reflections",
+        value:
+          "Through the e-learning app project, I gained valuable insights into the significance of user research and market analysis in shaping a successful product. I learned how understanding user needs and industry trends is essential for informed decision-making. Additionally, I recognized the importance of stakeholder collaboration, as it fosters a shared vision and ensures that the design aligns with business goals while meeting user expectations.",
+      },
+    ],
     tags: [
       {
         id: 1,
@@ -38,7 +77,11 @@ export const myProjects = [
   },
   {
     id: 2,
-    title: "Nexlynk",
+    slug: "nexlynk-elearning-app",
+    title: "E Learning App & Dashboard",
+    category: "App & Dashboard",
+    framework: "React Native, Next.js",
+    underCompany: "Lota Global",
     description:
       "A modern language learning platform for schools and students, supporting thousands of users with scalable UI components and responsive dashboards.",
     subDescription: [
@@ -50,6 +93,38 @@ export const myProjects = [
     href: "https://admin.nexlynk.com",
     logo: "",
     image: "/assets/projects/nexlynk.jpg",
+    images: [
+      "/assets/projects/nexlynk-2.jpg",
+      "/assets/projects/nexlynk-3.jpg",
+      "/assets/projects/nexlynk-4.jpg",
+    ],
+    objectives: [
+      {
+        key: "Problem Statement",
+        value:
+          "This project involves developing a digital e-learning app and dashboard for a local startup company collaborating with language schools. The platform will provide an intuitive interface for students and instructors, featuring course management tools, interactive learning resources, and progress tracking capabilities. By integrating tailored content and fostering collaboration between language schools and learners, the app aims to enhance the language learning experience and promote personalized education.",
+      },
+      {
+        key: "Objective",
+        value:
+          "The e-learning app offers a range of features to enhance learning for both students and instructors. Users can easily browse and purchase courses with secure payments, creating personalized accounts to track their progress. Instructors have access to tools for monitoring student performance and engagement. The app includes short video reels for quick lessons and a comprehensive Learning Management System (LMS) for seamless course delivery.",
+      },
+      {
+        key: "Role",
+        value:
+          "I worked on the e-learning app as a standalone project over 1.5 months, focusing on creating an engaging and user-friendly platform.",
+      },
+      {
+        key: "Design Process",
+        value:
+          "I began the design process with user research to gain insights into the needs and preferences of students and instructors. This involved conducting surveys and interviews to identify pain points and expectations regarding e-learning platforms. With this information, I defined the key requirements for the app and created low-fidelity wireframes to outline the layout and user flow. After refining these wireframes based on feedback, I developed high-fidelity prototypes that incorporated visual design elements, interactions, and animations..",
+      },
+      {
+        key: "Actions & Reflections",
+        value:
+          "Through the e-learning app project, I gained valuable insights into the significance of user research and market analysis in shaping a successful product. I learned how understanding user needs and industry trends is essential for informed decision-making. Additionally, I recognized the importance of stakeholder collaboration, as it fosters a shared vision and ensures that the design aligns with business goals while meeting user expectations.",
+      },
+    ],
     tags: [
       {
         id: 1,
@@ -76,6 +151,10 @@ export const myProjects = [
   {
     id: 3,
     title: "MIBA",
+    slug: "miba-lms-and-sms",
+    category: "App & Dashboard",
+    framework: "React Native, Next.js",
+    underCompany: "Lota Global",
     description:
       "A learning management system with a student portal for seamless course navigation and efficient course management.",
     subDescription: [
@@ -87,6 +166,38 @@ export const myProjects = [
     href: "https://miba.sportylite.com",
     logo: "",
     image: "/assets/projects/miba.jpg",
+    images: [
+      "/assets/projects/miba-2.jpg",
+      "/assets/projects/miba-3.jpg",
+      "/assets/projects/miba-4.jpg",
+    ],
+    objectives: [
+      {
+        key: "Problem Statement",
+        value:
+          "This project involves developing a digital e-learning app and dashboard for a local startup company collaborating with language schools. The platform will provide an intuitive interface for students and instructors, featuring course management tools, interactive learning resources, and progress tracking capabilities. By integrating tailored content and fostering collaboration between language schools and learners, the app aims to enhance the language learning experience and promote personalized education.",
+      },
+      {
+        key: "Objective",
+        value:
+          "The e-learning app offers a range of features to enhance learning for both students and instructors. Users can easily browse and purchase courses with secure payments, creating personalized accounts to track their progress. Instructors have access to tools for monitoring student performance and engagement. The app includes short video reels for quick lessons and a comprehensive Learning Management System (LMS) for seamless course delivery.",
+      },
+      {
+        key: "Role",
+        value:
+          "I worked on the e-learning app as a standalone project over 1.5 months, focusing on creating an engaging and user-friendly platform.",
+      },
+      {
+        key: "Design Process",
+        value:
+          "I began the design process with user research to gain insights into the needs and preferences of students and instructors. This involved conducting surveys and interviews to identify pain points and expectations regarding e-learning platforms. With this information, I defined the key requirements for the app and created low-fidelity wireframes to outline the layout and user flow. After refining these wireframes based on feedback, I developed high-fidelity prototypes that incorporated visual design elements, interactions, and animations..",
+      },
+      {
+        key: "Actions & Reflections",
+        value:
+          "Through the e-learning app project, I gained valuable insights into the significance of user research and market analysis in shaping a successful product. I learned how understanding user needs and industry trends is essential for informed decision-making. Additionally, I recognized the importance of stakeholder collaboration, as it fosters a shared vision and ensures that the design aligns with business goals while meeting user expectations.",
+      },
+    ],
     tags: [
       {
         id: 1,
@@ -107,7 +218,11 @@ export const myProjects = [
   },
   {
     id: 4,
+    slug: "ess-hr-web-application",
     title: "HR Web Application",
+    category: "App & Dashboard",
+    framework: "React Native, Next.js",
+    underCompany: "Lota Global",
     description:
       "A recruitment management system with responsive UI and microservices architecture for efficient hiring processes.",
     subDescription: [
@@ -119,6 +234,38 @@ export const myProjects = [
     href: "",
     logo: "",
     image: "/assets/projects/hrwebapp.jpg",
+    images: [
+      "/assets/projects/hrwebapp-2.jpg",
+      "/assets/projects/hrwebapp-3.jpg",
+      "/assets/projects/hrwebapp-4.jpg",
+    ],
+    objectives: [
+      {
+        key: "Problem Statement",
+        value:
+          "This project involves developing a digital e-learning app and dashboard for a local startup company collaborating with language schools. The platform will provide an intuitive interface for students and instructors, featuring course management tools, interactive learning resources, and progress tracking capabilities. By integrating tailored content and fostering collaboration between language schools and learners, the app aims to enhance the language learning experience and promote personalized education.",
+      },
+      {
+        key: "Objective",
+        value:
+          "The e-learning app offers a range of features to enhance learning for both students and instructors. Users can easily browse and purchase courses with secure payments, creating personalized accounts to track their progress. Instructors have access to tools for monitoring student performance and engagement. The app includes short video reels for quick lessons and a comprehensive Learning Management System (LMS) for seamless course delivery.",
+      },
+      {
+        key: "Role",
+        value:
+          "I worked on the e-learning app as a standalone project over 1.5 months, focusing on creating an engaging and user-friendly platform.",
+      },
+      {
+        key: "Design Process",
+        value:
+          "I began the design process with user research to gain insights into the needs and preferences of students and instructors. This involved conducting surveys and interviews to identify pain points and expectations regarding e-learning platforms. With this information, I defined the key requirements for the app and created low-fidelity wireframes to outline the layout and user flow. After refining these wireframes based on feedback, I developed high-fidelity prototypes that incorporated visual design elements, interactions, and animations..",
+      },
+      {
+        key: "Actions & Reflections",
+        value:
+          "Through the e-learning app project, I gained valuable insights into the significance of user research and market analysis in shaping a successful product. I learned how understanding user needs and industry trends is essential for informed decision-making. Additionally, I recognized the importance of stakeholder collaboration, as it fosters a shared vision and ensures that the design aligns with business goals while meeting user expectations.",
+      },
+    ],
     tags: [
       {
         id: 1,

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import { useNavigate } from "react-router-dom";
 
 const Project = ({
   title,
+  slug,
   description,
   subDescription,
   href,
@@ -10,7 +12,7 @@ const Project = ({
   tags,
   setPreview,
 }) => {
-  const [isHidden, setIsHidden] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -27,7 +29,7 @@ const Project = ({
           </div>
         </div>
         <button
-          onClick={() => setIsHidden(true)}
+          onClick={() => navigate(`/project/${slug}`)}
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
@@ -35,17 +37,6 @@ const Project = ({
         </button>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
-      {isHidden && (
-        <ProjectDetails
-          title={title}
-          description={description}
-          subDescription={subDescription}
-          image={image}
-          tags={tags}
-          href={href}
-          closeModal={() => setIsHidden(false)}
-        />
-      )}
     </>
   );
 };

@@ -1,14 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/cursor.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { useNavigate, useParams } from "react-router-dom";
+import { myProjects } from "../constants";
 
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Detail = () => {
   const cursorRef = useRef(null);
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const [project, setProject] = useState(null);
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -52,6 +58,15 @@ const Detail = () => {
       );
     });
 
+    if (slug && myProjects?.length) {
+      const foundProject = myProjects.find((proj) => proj.slug === slug);
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        navigate("/");
+      }
+    }
+
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       document.querySelectorAll("a, button, .hover-trigger").forEach((el) => {
@@ -59,25 +74,36 @@ const Detail = () => {
         el.removeEventListener("mouseleave", removeHover);
       });
     };
-  }, []);
+  }, [slug, navigate]);
+
+  // if (!project) return <div>Loading...</div>;
 
   return (
-    <div className="detail-page min-h-screen bg-black text-white">
+    <div className="detail-page bg-black text-white">
       <div ref={cursorRef} className="custom-cursor"></div>
-
       <Navbar />
-
       <div className="container mx-auto max-w-7xl pt-30">
         {/* Header Section */}
         <header className="px-6 py-4">
-          <h1 className="text-3xl font-bold mb-4">Intoxication Tracker App</h1>
-          <div className="flex space-x-8 text-sm opacity-75">
-            <span>App Concept</span>
-            <span>2 Weeks</span>
-            <span>Figma, Ps, Ai</span>
-            <a href="#" className="underline">
-              Full Case Study →
-            </a>
+          <h1 className="text-5xl font-medium mb-10">{project?.title}</h1>
+          <p className="text-lg mb-20 text-gray-400">{project?.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            <div className="pb-5">
+              <p className="text-sm mb-3 text-gray-400">Category</p>
+              <p className="text-xl">{project?.category}</p>
+            </div>
+            <div className="pb-5">
+              <p className="text-sm mb-3 text-gray-400">Frameworks & Tools</p>
+              <p className="text-xl">
+                {project?.tags.map((tag) => (
+                  <span key={tag.id}>{tag.name}, &nbsp;</span>
+                ))}
+              </p>
+            </div>
+            <div className="pb-5">
+              <p className="text-sm mb-3 text-gray-400">Under</p>
+              <p className="text-xl">{project?.underCompany}</p>
+            </div>
           </div>
         </header>
 
@@ -85,37 +111,102 @@ const Detail = () => {
         <section className="px-6 py-12">
           <div className="relative fade-in">
             <img
-              src="/path-to-hero-image.jpg"
+              src="/assets/projects/nexlynk.jpg"
               alt="iPhone mockup with app interface"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </section>
 
         {/* Problem Statement Section */}
-        <section className="px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="fade-in">
-            <h2 className="text-xl font-semibold mb-4">Problem Statement</h2>
-            <p className="text-gray-400">
-              In June 2023, over 1,000 professionals, adults, and students
-              participated in a Facebook trending topic (UXR design challenge)
-              for alcohol-related awareness...
+        <section className="px-6 py-12">
+          <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+            <div className="flex gap-4 col-span-1">
+              <p className="text-xs text-gray-400">01</p>
+              <h2 className="text-2xl">{project?.objectives[0]?.key}</h2>
+            </div>
+            <p className="text-gray-400 col-span-2">
+              {project?.objectives[0].value}
             </p>
           </div>
-          <div className="fade-in">
-            <h2 className="text-xl font-semibold mb-4">Objective</h2>
-            <p className="text-gray-400">
-              Design a mobile app that enhances user awareness about their
-              alcohol consumption...
+          <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+            <div className="flex gap-4 col-span-1">
+              <p className="text-xs text-gray-400">02</p>
+              <h2 className="text-2xl">{project?.objectives[1].key}</h2>
+            </div>
+            <p className="text-gray-400 col-span-2">
+              {project?.objectives[1].value}{" "}
             </p>
           </div>
         </section>
 
         {/* App Screenshots Section */}
+        {project?.images[0] && (
+          <section className="px-6 py-12">
+            <img
+              src={project?.images[0]}
+              alt="App Interface 1"
+              className="w-full h-full rounded-lg"
+            />
+          </section>
+        )}
+        {/* Role & Process Section */}
         <section className="px-6 py-12">
+          <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+            <div className="flex gap-4 col-span-1">
+              <p className="text-xs text-gray-400">02</p>
+              <h2 className="text-2xl">{project?.objectives[2].key}</h2>
+            </div>
+            <p className="text-gray-400 col-span-2">
+              {project?.objectives[2].value}
+            </p>
+          </div>
+          <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+            <div className="flex gap-4 col-span-1">
+              <p className="text-xs text-gray-400">03</p>
+              <h2 className="text-2xl">{project?.objectives[3].key}</h2>
+            </div>
+            <p className="text-gray-400 col-span-2">
+              {project?.objectives[3].value}
+            </p>
+          </div>
+        </section>
+
+        {/* App Screenshots Section */}
+        {project?.images[1] && (
+          <section className="px-6 py-12">
+            <img
+              src={project?.images[1]}
+              alt="App Interface 1"
+              className="w-full h-full rounded-lg"
+            />
+          </section>
+        )}
+        {project?.images[2] && (
+          <section className="px-6 py-12">
+            <img
+              src={project?.images[2]}
+              alt="App Interface 1"
+              className="w-full h-full rounded-lg"
+            />
+          </section>
+        )}
+        {/* Actions & Reflections Section */}
+        <section className="px-6 py-12">
+          <div className="fade-in grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+            <div className="flex gap-4 col-span-1">
+              <p className="text-xs text-gray-400">05</p>
+              <h2 className="text-2xl">{project?.objectives[4].key}</h2>
+            </div>
+            <p className="text-gray-400 col-span-2">
+              {project?.objectives[4].value}
+            </p>
+          </div>
+        </section>
+        {/* <section className="px-6 py-12">
           <div className="grid grid-cols-2 gap-6 fade-in">
             <img
-              src="/path-to-screen1.jpg"
+              src="/assets/projects/nexlynk-3.jpg"
               alt="App Interface 1"
               className="w-full rounded-lg"
             />
@@ -125,31 +216,10 @@ const Detail = () => {
               className="w-full rounded-lg"
             />
           </div>
-        </section>
-
-        {/* Role Section */}
-        <section className="px-6 py-12">
-          <div className="fade-in">
-            <h2 className="text-xl font-semibold mb-4">Role</h2>
-            <p className="text-gray-400">
-              This is a project I took on alone in the course of 2 weeks...
-            </p>
-          </div>
-        </section>
-
-        {/* Hand-held Device Section */}
-        <section className="px-6 py-12">
-          <div className="flex justify-center fade-in">
-            <img
-              src="/path-to-hand-mockup.jpg"
-              alt="Hand holding iPhone with app interface"
-              className="w-full max-w-md"
-            />
-          </div>
-        </section>
+        </section> */}
 
         {/* Results Grid */}
-        <section className="px-6 py-12">
+        {/* <section className="px-6 py-12">
           <h2 className="text-xl font-semibold mb-8">Result</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 fade-in">
             {[...Array(5)].map((_, index) => (
@@ -165,20 +235,9 @@ const Detail = () => {
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Reflection Section */}
-        <section className="px-6 py-12">
-          <div className="fade-in">
-            <h2 className="text-xl font-semibold mb-4">
-              Reflection & Takeaway
-            </h2>
-            <p className="text-gray-400">
-              Working on Safe Steps was a great learning experience...
-            </p>
-          </div>
-        </section>
+        </section> */}
       </div>
+      <Footer />
     </div>
   );
 };
