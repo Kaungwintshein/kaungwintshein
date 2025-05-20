@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
-        <h1 className="title uppercase">Frontend Developer</h1>
+        <h1 className="title uppercase">Kaung Wint Shein</h1>
         <div className="description">
           <p>
             I'm currently orchestrating experiences at Fredoma for a leading
