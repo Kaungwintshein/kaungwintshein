@@ -21,35 +21,35 @@ export const myProjects = [
     logo: "",
     image: "/assets/projects/ezypet.jpg",
     images: [
-      "/assets/projects/ezypet-1.jpg",
-      "/assets/projects/ezypet-2.jpg",
-      "/assets/projects/ezypet-3.jpg",
+      "/assets/projects/ezypet_1.png",
+      "/assets/projects/ezypet_4.png",
+      "/assets/projects/ezypet_2.png",
     ],
     objectives: [
       {
-        key: "Problem Statement",
+        key: "Development Challenges",
         value:
-          "This project involves developing a digital e-learning app and dashboard for a local startup company collaborating with language schools. The platform will provide an intuitive interface for students and instructors, featuring course management tools, interactive learning resources, and progress tracking capabilities. By integrating tailored content and fostering collaboration between language schools and learners, the app aims to enhance the language learning experience and promote personalized education.",
+          "Building Ezypet was challenging due to the need for real-time features like lost pet alerts and health record updates across iOS and Android. I struggled with state synchronization for large datasets, ensuring responsiveness on various devices, and optimizing load times for low-resource users. Cross-platform inconsistencies and maintaining a lightweight codebase were also key hurdles that required careful debugging and performance tuning.",
       },
       {
-        key: "Objective",
+        key: "Project Goal",
         value:
-          "The e-learning app offers a range of features to enhance learning for both students and instructors. Users can easily browse and purchase courses with secure payments, creating personalized accounts to track their progress. Instructors have access to tools for monitoring student performance and engagement. The app includes short video reels for quick lessons and a comprehensive Learning Management System (LMS) for seamless course delivery.",
+          "The goal was to create a scalable pet care app that integrates global platforms for delivery and health management. I focused on secure authentication, an intuitive frontend with Tailwind CSS, and features like payment systems, localization, and advanced filters. The aim was to deliver a user-friendly, future-proof solution for pet owners while ensuring robust performance.",
       },
       {
         key: "Role",
         value:
-          "I worked on the e-learning app as a standalone project over 1.5 months, focusing on creating an engaging and user-friendly platform.",
+          "I led the UI design and implementation using React Native and Tailwind CSS. I collaborated with the design team to build responsive interfaces, integrated PHP-based APIs for seamless data flow and conducted thorough testing to ensure stability. My focus on component-based architecture and clean code principles enhanced the app’s usability and scalability.",
       },
       {
-        key: "Design Process",
+        key: "Development Approach",
         value:
-          "I began the design process with user research to gain insights into the needs and preferences of students and instructors. This involved conducting surveys and interviews to identify pain points and expectations regarding e-learning platforms. With this information, I defined the key requirements for the app and created low-fidelity wireframes to outline the layout and user flow. After refining these wireframes based on feedback, I developed high-fidelity prototypes that incorporated visual design elements, interactions, and animations..",
+          "I started with user research to understand pet owners’ needs, then adopted an MVC pattern for a modular codebase. Prototyping with React Native allowed iterative design improvements based on usability feedback. I optimized Service Workers for offline access, used GSAP for animations, and implemented multilingual support, addressing technical debt and edge cases like network issues through continuous testing.",
       },
       {
-        key: "Actions & Reflections",
+        key: "Key Takeaways and Impact",
         value:
-          "Through the e-learning app project, I gained valuable insights into the significance of user research and market analysis in shaping a successful product. I learned how understanding user needs and industry trends is essential for informed decision-making. Additionally, I recognized the importance of stakeholder collaboration, as it fosters a shared vision and ensures that the design aligns with business goals while meeting user expectations.",
+          "This project sharpened my skills in cross-platform development and performance optimization. I delivered a polished app with features like pet profiles, health records, blogs, lost pet posters, owner and co-owners features. Ezypet now empowers pet owners with a reliable, user-centric tool, showcasing my ability to build impactful solutions under pressure.",
       },
     ],
     tags: [
@@ -167,9 +167,9 @@ export const myProjects = [
     logo: "",
     image: "/assets/projects/miba.jpg",
     images: [
-      "/assets/projects/miba-2.jpg",
-      "/assets/projects/miba-3.jpg",
-      "/assets/projects/miba-4.jpg",
+      "/assets/projects/miba_1.png",
+      "/assets/projects/miba_2.png",
+      "/assets/projects/miba_3.png",
     ],
     objectives: [
       {
@@ -286,6 +286,69 @@ export const myProjects = [
         id: 4,
         name: "Docker",
         path: "/assets/logos/docker.svg",
+      },
+    ],
+  },
+  {
+    id: 5,
+    slug: "dozo-vpn-website",
+    title: "DOZO VPN Website",
+    category: "CMS Website",
+    framework: "Next.js, Laravel",
+    underCompany: "Freedoma",
+    description:
+      "A cross-platform pet care mobile app and admin portal for managing pet services, featuring responsive UI and real-time notifications.",
+    subDescription: [
+      "Built a mobile app with React Native, implementing a component-based architecture for modular and reusable UI development.",
+      "Developed an admin portal using Laravel, Livewire, and Tailwind CSS, following MVC architecture for efficient pet service management.",
+      "Applied clean architecture by structuring code with presentation, domain, and data layers, ensuring dependency inversion.",
+      "Integrated real-time notifications and responsive design, enhancing user engagement across platforms.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/dozo.png",
+    images: [
+      "/assets/projects/dozo_1.png",
+      "/assets/projects/dozo_2.png",
+      "/assets/projects/dozo_3.png",
+    ],
+    objectives: [
+      {
+        key: "Development Challenges",
+        value:
+          "Building Ezypet was challenging due to the need for real-time features like lost pet alerts and health record updates across iOS and Android. I struggled with state synchronization for large datasets, ensuring responsiveness on various devices, and optimizing load times for low-resource users. Cross-platform inconsistencies and maintaining a lightweight codebase were also key hurdles that required careful debugging and performance tuning.",
+      },
+      {
+        key: "Project Goal",
+        value:
+          "The goal was to create a scalable pet care app that integrates global platforms for delivery and health management. I focused on secure authentication, an intuitive frontend with Tailwind CSS, and features like payment systems, localization, and advanced filters. The aim was to deliver a user-friendly, future-proof solution for pet owners while ensuring robust performance.",
+      },
+      {
+        key: "Role",
+        value:
+          "I led the UI design and implementation using React Native and Tailwind CSS. I collaborated with the design team to build responsive interfaces, integrated PHP-based APIs for seamless data flow and conducted thorough testing to ensure stability. My focus on component-based architecture and clean code principles enhanced the app’s usability and scalability.",
+      },
+      {
+        key: "Development Approach",
+        value:
+          "I started with user research to understand pet owners’ needs, then adopted an MVC pattern for a modular codebase. Prototyping with React Native allowed iterative design improvements based on usability feedback. I optimized Service Workers for offline access, used GSAP for animations, and implemented multilingual support, addressing technical debt and edge cases like network issues through continuous testing.",
+      },
+      {
+        key: "Key Takeaways and Impact",
+        value:
+          "This project sharpened my skills in cross-platform development and performance optimization. I delivered a polished app with features like pet profiles, health records, blogs, lost pet posters, owner and co-owners features. Ezypet now empowers pet owners with a reliable, user-centric tool, showcasing my ability to build impactful solutions under pressure.",
+      },
+    ],
+    tags: [
+      {
+        id: 1,
+        name: "NestJs",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Laravel",
+        path: "/assets/logos/laravel.svg",
       },
     ],
   },

@@ -15,8 +15,32 @@ const Detail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [project]);
+
+  useEffect(() => {
+    const initializeProject = async () => {
+      setLoading(true);
+      if (slug && myProjects?.length) {
+        const foundProject = myProjects.find((proj) => proj.slug === slug);
+        if (foundProject) {
+          setProject(foundProject);
+        } else {
+          navigate("/");
+        }
+      }
+      setLoading(false);
+    };
+
+    initializeProject();
+  }, [slug, navigate]);
+
+  useEffect(() => {
+    if (!project) return;
+
     const cursor = cursorRef.current;
     const moveCursor = (e) => {
       gsap.to(cursor, {
@@ -36,7 +60,6 @@ const Detail = () => {
       el.addEventListener("mouseleave", removeHover);
     });
 
-    // Updated Scroll animations
     gsap.utils.toArray(".fade-in").forEach((element) => {
       gsap.fromTo(
         element,
@@ -58,15 +81,6 @@ const Detail = () => {
       );
     });
 
-    if (slug && myProjects?.length) {
-      const foundProject = myProjects.find((proj) => proj.slug === slug);
-      if (foundProject) {
-        setProject(foundProject);
-      } else {
-        navigate("/");
-      }
-    }
-
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       document.querySelectorAll("a, button, .hover-trigger").forEach((el) => {
@@ -74,9 +88,23 @@ const Detail = () => {
         el.removeEventListener("mouseleave", removeHover);
       });
     };
-  }, [slug, navigate]);
+  }, [project]);
 
-  // if (!project) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="text-2xl">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!project) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="text-2xl">Project not found</div>
+      </div>
+    );
+  }
 
   return (
     <div className="detail-page bg-black text-white">
@@ -95,8 +123,10 @@ const Detail = () => {
             <div className="pb-5">
               <p className="text-sm mb-3 text-gray-400">Frameworks & Tools</p>
               <p className="text-xl">
-                {project?.tags.map((tag) => (
-                  <span key={tag.id}>{tag.name}, &nbsp;</span>
+                {project?.tags.map((tag, index) => (
+                  <span key={tag.id}>
+                    {tag.name} {index !== project.tags.length - 1 && ",\u00A0"}{" "}
+                  </span>
                 ))}
               </p>
             </div>
@@ -111,7 +141,7 @@ const Detail = () => {
         <section className="px-6 py-12">
           <div className="relative fade-in">
             <img
-              src="/assets/projects/nexlynk.jpg"
+              src={project?.image}
               alt="iPhone mockup with app interface"
               className="w-full h-full object-cover"
             />
@@ -142,11 +172,11 @@ const Detail = () => {
 
         {/* App Screenshots Section */}
         {project?.images[0] && (
-          <section className="px-6 py-12">
+          <section className="px-6 py-12 flex justify-center">
             <img
               src={project?.images[0]}
               alt="App Interface 1"
-              className="w-full h-full rounded-lg"
+              className="w-full h-full !max-h-[786px] rounded-lg"
             />
           </section>
         )}
@@ -174,20 +204,20 @@ const Detail = () => {
 
         {/* App Screenshots Section */}
         {project?.images[1] && (
-          <section className="px-6 py-12">
+          <section className="px-6 py-12 flex justify-center">
             <img
               src={project?.images[1]}
               alt="App Interface 1"
-              className="w-full h-full rounded-lg"
+              className="h-full !max-h-[786px] rounded-lg"
             />
           </section>
         )}
         {project?.images[2] && (
-          <section className="px-6 py-12">
+          <section className="px-6 py-12 flex justify-center">
             <img
               src={project?.images[2]}
               alt="App Interface 1"
-              className="w-full h-full rounded-lg"
+              className="h-full !max-h-[786px] rounded-lg"
             />
           </section>
         )}
@@ -237,7 +267,9 @@ const Detail = () => {
           </div>
         </section> */}
       </div>
-      <Footer />
+      <div className="container mx-auto max-w-7xl">
+        <Footer />
+      </div>
     </div>
   );
 };
