@@ -39,12 +39,12 @@ export const myProjects = [
       {
         key: "Role",
         value:
-          "I led the UI design and implementation using React Native and Tailwind CSS. I collaborated with the design team to build responsive interfaces, integrated PHP-based APIs for seamless data flow and conducted thorough testing to ensure stability. My focus on component-based architecture and clean code principles enhanced the app’s usability and scalability.",
+          "I led the UI design and implementation using React Native and Tailwind CSS. I collaborated with the design team to build responsive interfaces, integrated PHP-based APIs for seamless data flow and conducted thorough testing to ensure stability. My focus on component-based architecture and clean code principles enhanced the app's usability and scalability.",
       },
       {
         key: "Development Approach",
         value:
-          "I started with user research to understand pet owners’ needs, then adopted an MVC pattern for a modular codebase. Prototyping with React Native allowed iterative design improvements based on usability feedback. I optimized Service Workers for offline access, used GSAP for animations, and implemented multilingual support, addressing technical debt and edge cases like network issues through continuous testing.",
+          "I started with user research to understand pet owners' needs, then adopted an MVC pattern for a modular codebase. Prototyping with React Native allowed iterative design improvements based on usability feedback. I optimized Service Workers for offline access, used GSAP for animations, and implemented multilingual support, addressing technical debt and edge cases like network issues through continuous testing.",
       },
       {
         key: "Key Takeaways and Impact",
@@ -297,16 +297,11 @@ export const myProjects = [
     framework: "Next.js, Laravel",
     underCompany: "Freedoma",
     description:
-      "A cross-platform pet care mobile app and admin portal for managing pet services, featuring responsive UI and real-time notifications.",
-    subDescription: [
-      "Built a mobile app with React Native, implementing a component-based architecture for modular and reusable UI development.",
-      "Developed an admin portal using Laravel, Livewire, and Tailwind CSS, following MVC architecture for efficient pet service management.",
-      "Applied clean architecture by structuring code with presentation, domain, and data layers, ensuring dependency inversion.",
-      "Integrated real-time notifications and responsive design, enhancing user engagement across platforms.",
-    ],
+      "The DOZO VPN Website is a CMS-powered platform built with Next.js and Laravel, offering a secure VPN service with military-grade encryption, global server access, a no-logs policy, fast streaming speeds, real-time server monitoring, and cross-device compatibility. It serves users seeking privacy and seamless browsing, with free and premium plan options.",
     href: "",
     logo: "",
     image: "/assets/projects/dozo.png",
+    videoUrl: "/assets/projects/videos/dozo.mp4",
     images: [
       "/assets/projects/dozo_1.png",
       "/assets/projects/dozo_2.png",
@@ -316,27 +311,27 @@ export const myProjects = [
       {
         key: "Development Challenges",
         value:
-          "Building Ezypet was challenging due to the need for real-time features like lost pet alerts and health record updates across iOS and Android. I struggled with state synchronization for large datasets, ensuring responsiveness on various devices, and optimizing load times for low-resource users. Cross-platform inconsistencies and maintaining a lightweight codebase were also key hurdles that required careful debugging and performance tuning.",
+          "I worked hard to make it run smoothly on every device. Linking the Laravel backend with the Next.js frontend took some effort. Keeping it secure and fast was also a big focus.",
       },
       {
         key: "Project Goal",
         value:
-          "The goal was to create a scalable pet care app that integrates global platforms for delivery and health management. I focused on secure authentication, an intuitive frontend with Tailwind CSS, and features like payment systems, localization, and advanced filters. The aim was to deliver a user-friendly, future-proof solution for pet owners while ensuring robust performance.",
+          "I aimed to build a simple, safe VPN site that's easy to use and can grow. It's meant to improve browsing and might get new features later.",
       },
       {
         key: "Role",
         value:
-          "I led the UI design and implementation using React Native and Tailwind CSS. I collaborated with the design team to build responsive interfaces, integrated PHP-based APIs for seamless data flow and conducted thorough testing to ensure stability. My focus on component-based architecture and clean code principles enhanced the app’s usability and scalability.",
+          "I developed the responsive frontend with Next.js and set up the secure backend with Laravel, making sure it handles data well across devices.",
       },
       {
         key: "Development Approach",
         value:
-          "I started with user research to understand pet owners’ needs, then adopted an MVC pattern for a modular codebase. Prototyping with React Native allowed iterative design improvements based on usability feedback. I optimized Service Workers for offline access, used GSAP for animations, and implemented multilingual support, addressing technical debt and edge cases like network issues through continuous testing.",
+          "I started by planning the site's structure and user needs. Then, I built the frontend with Next.js to keep it fast and responsive. For the backend, I used Laravel to manage content securely and handle data. I tested everything step-by-step to make sure it worked well on all devices.",
       },
       {
         key: "Key Takeaways and Impact",
         value:
-          "This project sharpened my skills in cross-platform development and performance optimization. I delivered a polished app with features like pet profiles, health records, blogs, lost pet posters, owner and co-owners features. Ezypet now empowers pet owners with a reliable, user-centric tool, showcasing my ability to build impactful solutions under pressure.",
+          "This project deepened my understanding of Next.js for creating fast, responsive frontends and Laravel for building a secure, scalable backend. I learned to tackle complex API integrations and optimize performance under tight deadlines, especially while ensuring cross-device compatibility.",
       },
     ],
     tags: [
@@ -683,7 +678,7 @@ export const reviews = [
   {
     name: "Girja Shanker",
     username: "@kothet",
-    body: "Kaung’s ability to deliver high-quality code under tight deadlines is remarkable. He’s a true asset to any team and someone I highly recommend.",
+    body: "Kaung's ability to deliver high-quality code under tight deadlines is remarkable. He's a true asset to any team and someone I highly recommend.",
     img: "https://robohash.org/john",
   },
   {

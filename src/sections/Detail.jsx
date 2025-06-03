@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useNavigate, useParams } from "react-router-dom";
 import { myProjects } from "../constants";
+import VideoPlayer from "../components/VideoPlayer";
 
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -233,6 +234,8 @@ const Detail = () => {
             </p>
           </div>
         </section>
+        {/* Video Section */}
+        {project?.videoUrl && <VideoPlayer videoUrl={project?.videoUrl} />}
         {/* <section className="px-6 py-12">
           <div className="grid grid-cols-2 gap-6 fade-in">
             <img
