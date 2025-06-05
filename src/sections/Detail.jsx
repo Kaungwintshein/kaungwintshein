@@ -4,11 +4,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/cursor.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { myProjects } from "../constants";
 import VideoPlayer from "../components/VideoPlayer";
 
-// Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Detail = () => {
@@ -112,6 +111,29 @@ const Detail = () => {
       <div ref={cursorRef} className="custom-cursor"></div>
       <Navbar />
       <div className="container mx-auto max-w-7xl pt-30">
+        <div className="px-[1rem] flex items-center mb-10">
+          <Link
+            to="/"
+            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>Back</span>
+          </Link>
+        </div>
         {/* Header Section */}
         <header className="px-6 py-4">
           <h1 className="text-5xl font-medium mb-10">{project?.title}</h1>
@@ -235,21 +257,27 @@ const Detail = () => {
           </div>
         </section>
         {/* Video Section */}
-        {project?.videoUrl && <VideoPlayer videoUrl={project?.videoUrl} />}
-        {/* <section className="px-6 py-12">
-          <div className="grid grid-cols-2 gap-6 fade-in">
-            <img
-              src="/assets/projects/nexlynk-3.jpg"
-              alt="App Interface 1"
-              className="w-full rounded-lg"
-            />
-            <img
-              src="/path-to-screen2.jpg"
-              alt="App Interface 2"
-              className="w-full rounded-lg"
-            />
-          </div>
-        </section> */}
+        {/* {project?.videoUrl && <VideoPlayer videoUrl={project?.videoUrl} />} */}
+        <video
+          controls
+          width="100%"
+          // poster={poster}
+          style={{ borderRadius: "8px" }}
+        >
+          <source src={"/assets/projects/videos/dozo.mp4"} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {project?.videoUrl && (
+          <video
+            controls
+            width="100%"
+            // poster={poster}
+            style={{ borderRadius: "8px" }}
+          >
+            <source src={project?.videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
 
         {/* Results Grid */}
         {/* <section className="px-6 py-12">

@@ -233,11 +233,11 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/hrwebapp.jpg",
+    image: "/assets/projects/hrwebapp.png",
     images: [
-      "/assets/projects/hrwebapp-2.jpg",
-      "/assets/projects/hrwebapp-3.jpg",
-      "/assets/projects/hrwebapp-4.jpg",
+      "/assets/projects/hrwebapp_1.png",
+      "/assets/projects/hrwebapp_2.png",
+      "/assets/projects/hrwebapp_3.png",
     ],
     objectives: [
       {

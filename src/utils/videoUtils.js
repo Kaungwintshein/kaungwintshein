@@ -74,21 +74,41 @@ export const checkVideoSupport = () => {
   };
 };
 
+// Determine content type from file extension or URL
+const getContentType = (url) => {
+  const extension = url.split(".").pop().toLowerCase();
+  const types = {
+    mp4: "video/mp4",
+    webm: "video/webm",
+    m4v: "video/mp4",
+    ogv: "video/ogg",
+  };
+  return types[extension] || "video/mp4";
+};
+
 export const createBlobUrl = async (videoPath) => {
   if (blobCache.has(videoPath)) {
     return blobCache.get(videoPath);
   }
 
   try {
+    const expectedContentType = getContentType(videoPath);
     const response = await fetch(videoPath, {
       headers: {
-        Accept: "video/mp4,video/webm,video/*;q=0.9,*/*;q=0.8",
+        Accept: "video/webm,video/mp4,video/*;q=0.9,*/*;q=0.8",
       },
     });
 
-    const contentType = response.headers.get("content-type") || "video/mp4";
-    const blob = await response.blob();
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch video: ${response.status} ${response.statusText}`
+      );
+    }
 
+    const blob = await response.blob();
+    const contentType = blob.type || expectedContentType;
+
+    // Create a new blob with explicit type to ensure proper MIME type
     const typedBlob = new Blob([blob], { type: contentType });
     const blobUrl = URL.createObjectURL(typedBlob);
 
