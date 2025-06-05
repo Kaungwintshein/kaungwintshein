@@ -108,7 +108,7 @@ const Detail = () => {
   }
 
   return (
-    <div className="detail-page bg-black text-white">
+    <div className="detail-page bg-black text-white cursor-none">
       <div ref={cursorRef} className="custom-cursor"></div>
       <Navbar />
       <div className="container mx-auto max-w-7xl pt-30">
