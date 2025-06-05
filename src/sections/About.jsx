@@ -26,10 +26,13 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Kaung Wint Shein</p>
             <p className="subtext">
-              Over the last 3 years, I developed my frontend and backend dev
+              {/* Over the last 3 years, I developed my frontend and backend dev
               skills to deliver dynamic and software and web applications. My
               approach combines strategic thinking with a deep understanding of
-              user needs and technical constraints.
+              user needs and technical constraints. */}
+              I’ve been passionately pursuing a career in web development for
+              over 3 years, having extensive experience with technologies such
+              as React.js, Next.js, Node.js, Python, Django, and SQL databases.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />

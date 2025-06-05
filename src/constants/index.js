@@ -237,7 +237,7 @@ export const myProjects = [
     images: [
       "/assets/projects/hrwebapp_1.png",
       "/assets/projects/hrwebapp_2.png",
-      "/assets/projects/hrwebapp_3.png",
+      // "/assets/projects/hrwebapp_3.png",
     ],
     objectives: [
       {
@@ -301,7 +301,7 @@ export const myProjects = [
     href: "",
     logo: "",
     image: "/assets/projects/dozo.png",
-    videoUrl: "/assets/projects/videos/dozo.mp4",
+    // videoUrl: "/assets/projects/videos/dozo.mp4",
     images: [
       "/assets/projects/dozo_1.png",
       "/assets/projects/dozo_2.png",

@@ -257,27 +257,7 @@ const Detail = () => {
           </div>
         </section>
         {/* Video Section */}
-        {/* {project?.videoUrl && <VideoPlayer videoUrl={project?.videoUrl} />} */}
-        <video
-          controls
-          width="100%"
-          // poster={poster}
-          style={{ borderRadius: "8px" }}
-        >
-          <source src={"/assets/projects/videos/dozo.mp4"} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {project?.videoUrl && (
-          <video
-            controls
-            width="100%"
-            // poster={poster}
-            style={{ borderRadius: "8px" }}
-          >
-            <source src={project?.videoUrl} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+        {project?.videoUrl && <VideoPlayer videoUrl={project?.videoUrl} />}
 
         {/* Results Grid */}
         {/* <section className="px-6 py-12">

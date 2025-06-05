@@ -8,20 +8,23 @@ import Testimonial from "./sections/Testimonial";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Intro from "./sections/Intro";
+import LoadingReveal from "./components/LoadingReveal";
 
 const App = () => {
   return (
-    <div className="container mx-auto max-w-7xl">
-      <Navbar />
-      <Intro />
-      {/* <Hero /> */}
-      <About />
-      <Projects />
-      <Experiences />
-      <Testimonial />
-      <Contact />
-      <Footer />
-    </div>
+    <LoadingReveal>
+      <div className="container mx-auto max-w-7xl">
+        <Navbar />
+        <Intro />
+        {/* <Hero /> */}
+        <About />
+        <Projects />
+        <Experiences />
+        <Testimonial />
+        <Contact />
+        <Footer />
+      </div>
+    </LoadingReveal>
   );
 };
 
